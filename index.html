@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VILLE // Portfolio</title>
+<meta name="description" content="Futuristic cyberpunk-style developer portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER / BOOT SEQUENCE ============ -->
+<div class="preloader" id="preloader">
+  <div class="boot-frame">
+    <div class="boot-line">INITIALIZING SYSTEM<span class="dots"></span></div>
+    <div class="boot-bar"><div class="boot-bar-fill" id="bootFill"></div></div>
+    <div class="boot-log" id="bootLog"></div>
+  </div>
+</div>
+
+<!-- ============ BACKGROUND FX ============ -->
+<div class="bg-grid"></div>
+<div class="bg-scanline"></div>
+<div class="bg-glow bg-glow--cyan"></div>
+<div class="bg-glow bg-glow--magenta"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav__logo">VILLE<span>.SYS</span></a>
+  <nav class="nav__links" id="navLinks">
+    <a href="#home" class="nav__link active">HOME</a>
+    <a href="#about" class="nav__link">ABOUT</a>
+    <a href="#skills" class="nav__link">SKILLS</a>
+    <a href="#projects" class="nav__link">PROJECTS</a>
+    <a href="#contact" class="nav__link">CONTACT</a>
+  </nav>
+  <div class="nav__status">
+    <span class="nav__dot"></span> ONLINE
+  </div>
+  <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__frame">
+      <div class="corner corner--tl"></div>
+      <div class="corner corner--tr"></div>
+      <div class="corner corner--bl"></div>
+      <div class="corner corner--br"></div>
+
+      <p class="hero__eyebrow">// WELCOME TO MY NETWORK</p>
+      <h1 class="hero__title glitch" data-text="RYAN VILLANUEVA">RYAN VILLANUEVA</h1>
+      <p class="hero__subtitle">
+        <span id="typedText"></span><span class="cursor">_</span>
+      </p>
+      <p class="hero__desc">
+        Full-stack developer crafting immersive, high-performance web experiences.
+        Currently building interfaces that feel like they're from the future.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          <span>VIEW PROJECTS</span>
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <span>ESTABLISH CONTACT</span>
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value" data-count="4">0</span>
+          <span class="stat__label">YRS EXPERIENCE</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" data-count="28">0</span>
+          <span class="stat__label">PROJECTS SHIPPED</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" data-count="99">0</span>
+          <span class="stat__label">% UPTIME</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">SCROLL <span>▾</span></div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section__head" data-reveal>
+      <span class="section__tag">01 // PROFILE</span>
+      <h2 class="section__title">ABOUT ME</h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__photo" data-reveal>
+        <div class="hex-frame">
+          <div class="hex-frame__inner">
+            <span class="hex-frame__glyph">RV</span>
+          </div>
+        </div>
+        <div class="id-badge">
+          <div class="id-badge__row"><span>STATUS</span><span class="ok">ACTIVE</span></div>
+          <div class="id-badge__row"><span>CLEARANCE</span><span>LEVEL 5</span></div>
+          <div class="id-badge__row"><span>LOCATION</span><span>PH // REMOTE</span></div>
+        </div>
+      </div>
+
+      <div class="about__content" data-reveal>
+        <p>
+          I'm a developer who treats every interface like a control panel — precise, responsive,
+          and a little bit dramatic. I specialize in building web applications with meticulous
+          attention to motion, feedback, and detail.
+        </p>
+        <p>
+          Over the past few years I've worked across frontend architecture, backend systems, and
+          everything that connects them. I care about performance as much as I care about pixels.
+        </p>
+
+        <div class="terminal" id="aboutTerminal">
+          <div class="terminal__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="terminal__title">whoami.sh</span>
+          </div>
+          <div class="terminal__body" id="terminalBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section__head" data-reveal>
+      <span class="section__tag">02 // LOADOUT</span>
+      <h2 class="section__title">SKILLS &amp; SYSTEMS</h2>
+    </div>
+
+    <div class="skills__grid" data-reveal>
+      <div class="skill-bar" data-level="92">
+        <div class="skill-bar__top"><span>JavaScript / TypeScript</span><span class="skill-bar__pct">92%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+      <div class="skill-bar" data-level="88">
+        <div class="skill-bar__top"><span>React / Next.js</span><span class="skill-bar__pct">88%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+      <div class="skill-bar" data-level="80">
+        <div class="skill-bar__top"><span>Node.js / APIs</span><span class="skill-bar__pct">80%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+      <div class="skill-bar" data-level="75">
+        <div class="skill-bar__top"><span>UI / Motion Design</span><span class="skill-bar__pct">75%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+      <div class="skill-bar" data-level="70">
+        <div class="skill-bar__top"><span>Databases / SQL</span><span class="skill-bar__pct">70%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+      <div class="skill-bar" data-level="65">
+        <div class="skill-bar__top"><span>DevOps / CI-CD</span><span class="skill-bar__pct">65%</span></div>
+        <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+      </div>
+    </div>
+
+    <div class="chip-row" data-reveal>
+      <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">React</span>
+      <span class="chip">Next.js</span><span class="chip">Node.js</span><span class="chip">MongoDB</span>
+      <span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">Git</span>
+      <span class="chip">Figma</span><span class="chip">Tailwind</span><span class="chip">GraphQL</span>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="section__head" data-reveal>
+      <span class="section__tag">03 // ARCHIVE</span>
+      <h2 class="section__title">PROJECTS</h2>
+    </div>
+
+    <div class="projects__grid" id="projectsGrid" data-reveal>
+      <!-- Project cards injected/enhanced via JS but present in markup for no-JS fallback -->
+      <article class="project-card" data-project="nexus">
+        <div class="project-card__frame">
+          <div class="project-card__glow"></div>
+          <span class="project-card__id">FILE_01</span>
+          <h3 class="project-card__title">Nexus Dashboard</h3>
+          <p class="project-card__desc">Real-time analytics dashboard with live data streaming and custom visualizations.</p>
+          <div class="project-card__tags"><span>React</span><span>WebSocket</span><span>D3.js</span></div>
+          <span class="project-card__cta">OPEN FILE →</span>
+        </div>
+      </article>
+
+      <article class="project-card" data-project="cipher">
+        <div class="project-card__frame">
+          <div class="project-card__glow"></div>
+          <span class="project-card__id">FILE_02</span>
+          <h3 class="project-card__title">Cipher Auth</h3>
+          <p class="project-card__desc">Secure authentication microservice with biometric-style multi-factor flow.</p>
+          <div class="project-card__tags"><span>Node.js</span><span>JWT</span><span>PostgreSQL</span></div>
+          <span class="project-card__cta">OPEN FILE →</span>
+        </div>
+      </article>
+
+      <article class="project-card" data-project="drift">
+        <div class="project-card__frame">
+          <div class="project-card__glow"></div>
+          <span class="project-card__id">FILE_03</span>
+          <h3 class="project-card__title">Drift Commerce</h3>
+          <p class="project-card__desc">Headless e-commerce storefront with animated product exploration.</p>
+          <div class="project-card__tags"><span>Next.js</span><span>Stripe</span><span>Framer Motion</span></div>
+          <span class="project-card__cta">OPEN FILE →</span>
+        </div>
+      </article>
+
+      <article class="project-card" data-project="orbit">
+        <div class="project-card__frame">
+          <div class="project-card__glow"></div>
+          <span class="project-card__id">FILE_04</span>
+          <h3 class="project-card__title">Orbit Chat</h3>
+          <p class="project-card__desc">Encrypted real-time messaging app with presence indicators and reactions.</p>
+          <div class="project-card__tags"><span>Socket.io</span><span>Redis</span><span>React</span></div>
+          <span class="project-card__cta">OPEN FILE →</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section__head" data-reveal>
+      <span class="section__tag">04 // TRANSMIT</span>
+      <h2 class="section__title">ESTABLISH CONTACT</h2>
+    </div>
+
+    <div class="contact__grid" data-reveal>
+      <form class="contact__form" id="contactForm">
+        <div class="field">
+          <label for="cName">IDENTIFICATION</label>
+          <input type="text" id="cName" name="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="cEmail">TRANSMISSION ADDRESS</label>
+          <input type="email" id="cEmail" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="cMsg">MESSAGE PAYLOAD</label>
+          <textarea id="cMsg" name="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">
+          <span>SEND TRANSMISSION</span>
+        </button>
+        <p class="field__note" id="formNote"></p>
+      </form>
+
+      <div class="contact__side">
+        <div class="contact__card">
+          <span class="contact__label">EMAIL</span>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+        <div class="contact__card">
+          <span class="contact__label">LOCATION</span>
+          <span>Philippines // Remote-first</span>
+        </div>
+        <div class="contact__card">
+          <span class="contact__label">SOCIALS</span>
+          <div class="contact__socials">
+            <a href="#" aria-label="GitHub">GitHub</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> RYAN VILLANUEVA — SYSTEM STATUS: <span class="ok">OPERATIONAL</span></p>
+</footer>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__scan"></div>
+    <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+    <span class="modal__id" id="modalId">FILE_00</span>
+    <h3 class="modal__title" id="modalTitle">Project Title</h3>
+    <p class="modal__desc" id="modalDesc">Description goes here.</p>
+    <div class="modal__tags" id="modalTags"></div>
+    <div class="modal__meta">
+      <div><span>ROLE</span><p id="modalRole">—</p></div>
+      <div><span>YEAR</span><p id="modalYear">—</p></div>
+      <div><span>STATUS</span><p class="ok" id="modalStatus">DEPLOYED</p></div>
+    </div>
+    <div class="modal__actions">
+      <a href="#" class="btn btn--primary" id="modalLive"><span>LIVE DEMO</span></a>
+      <a href="#" class="btn btn--ghost" id="modalCode"><span>SOURCE CODE</span></a>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
