@@ -181,7 +181,7 @@ function initTerminal() {
   const body = document.getElementById('terminalBody');
   const script = [
     '$ whoami',
-    'ryan_villanueva // full-stack developer',
+    'ville_ryane_san_esteban // full-stack developer',
     '$ cat mission.txt',
     'Build fast, resilient, beautiful software.',
     '$ status --check',
